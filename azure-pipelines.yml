@@ -62,11 +62,11 @@ stages:
             displayName: 'Download Pipeline Artifact'
             inputs:
               deploymentScope: 'Subscription'
-              azureResourceManagerConnection: 'DevOps-Connection'
-              subscriptionId:  'd2bbd7d5-31cf-4cf1-98d5-e680d7eaccba'
+              azureResourceManagerConnection: 'Visual Studio Enterprise 2019 (d2bbd7d5-31cf-4cf1-98d5-e680d7eaccba)'
+              subscriptionId: 'd2bbd7d5-31cf-4cf1-98d5-e680d7eaccba'
               location: 'West Europe'
               templateLocation: 'Linked artifact'
-              deploymentMode: Incremental
+              deploymentMode: 'Incremental'
 
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: gs-spring-boot'
