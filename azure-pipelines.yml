@@ -58,10 +58,15 @@ stages:
       runOnce:
         deploy:
           steps:
-          - task: DownloadPipelineArtifact@1
+          - task: AzureResourceManagerTemplateDeployment@3
             displayName: 'Download Pipeline Artifact'
             inputs:
-              buildType: 'current'
+              deploymentScope: 'Subscription'
+              azureResourceManagerConnection: 'DevOps-Connection'
+              subscriptionId:  'd2bbd7d5-31cf-4cf1-98d5-e680d7eaccba'
+              location: 'West Europe'
+              templateLocation: 'Linked artifact'
+              deploymentMode: Incremental
 
           - task: AzureWebApp@1
             displayName: 'Azure Web App Deploy: gs-spring-boot'
