@@ -16,11 +16,11 @@ ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
-#rm -rf build
+rm -rf build
 
-#cd ../initial
+cd ../initial
 
-#mvn clean compile
+mvn clean compile
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
